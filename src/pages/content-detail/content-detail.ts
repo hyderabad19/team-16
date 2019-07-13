@@ -15,6 +15,7 @@ import * as firebase from 'firebase';
 })
 export class ContentDetailPage {
   show:boolean
+  comment:string;
   image_url="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_0016c93c710cf35990b999cba3a59bae/firebase.png";
   userName="User name goes here";
   postedDate="Post Created Date";
@@ -28,7 +29,19 @@ export class ContentDetailPage {
     console.log('ionViewDidLoad ContentDetailPage');
   }
 
-  commentPost(){
+  addComment()
+  {
+    let comment_string=this.comment.trim();
+    if(!(comment_string===""))
+    {
+      firebase.database().ref(`comments/`).set
+    	({
+        userId:"Not yet",
+        comment:this.comment,
+     	})
+    }
+  }
+  commentView(){
     console.log("here",this.show);
     if(this.show===false || this.show===undefined){
       this.show=true;

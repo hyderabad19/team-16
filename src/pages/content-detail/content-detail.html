@@ -30,23 +30,23 @@
             <ion-col>
                 <div>
                     <button ion-button icon-left clear small>
-              <ion-icon name="thumbs-up"></ion-icon>
-              
-            </button> {{likesCount}}
+                  <ion-icon name="thumbs-up"></ion-icon>
+                  
+                </button> {{likesCount}}
                 </div>
             </ion-col>
             <ion-col>
-                <button ion-button icon-left clear small (click)="commentPost()">
-              <ion-icon name="text"></ion-icon>
-              <div>Comments </div>
-            </button>
+                <button ion-button icon-left clear small (click)="commentView()">
+                  <ion-icon name="text"></ion-icon>
+                  <div>Comments </div>
+                </button>
             </ion-col>
             <ion-col>
                 <button ion-button icon-left clear small>
-                <ion-icon name="paper">
-                    Feedback
-                </ion-icon>
-              </button>
+                    <ion-icon name="paper">
+                        Feedback
+                    </ion-icon>
+                  </button>
             </ion-col>
             <ion-col center text-center>
                 <ion-note>
@@ -61,7 +61,7 @@
         <!-- <ion-input type="text" *ngIf="show" [(ngModel)]="comment"></ion-input> -->
         <ion-label floating>Type your Comment Below</ion-label>
         <ion-input type="text" [(ngModel)]="comment"></ion-input>
-        <button ion-button>Comment</button>
+        <button ion-button (click)="addComment()">Comment</button>
     </ion-card>
     <ion-card *ngFor="let c of comment_list">
         {{ c }}
