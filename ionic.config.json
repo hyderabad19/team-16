@@ -1,5 +1,7 @@
 {
   "name": "learningcurve",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
