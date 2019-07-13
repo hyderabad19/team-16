@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { SearchPage } from '../pages/search/search';
+import { FeedBackPage } from '../pages/feed-back/feed-back';
 
 import { ContentDetailPage } from '../pages/content-detail/content-detail';
 
@@ -26,7 +27,7 @@ firebase.initializeApp(firebaseConfig);
 
 @NgModule({
   declarations: [
-    MyApp,
+    MyApp,FeedBackPage,
     HomePage,
     SearchPage,
     ContentDetailPage,
@@ -40,6 +41,7 @@ firebase.initializeApp(firebaseConfig);
   entryComponents: [
     MyApp,
     HomePage,
+    FeedBackPage,
     SearchPage,
     ContentDetailPage,
     LoginPage
