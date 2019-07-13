@@ -1,6 +1,9 @@
+import { DataProvider } from './../../providers/data/data';
+import { MaterialPage } from './../material/material';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import * as firebase from 'firebase';
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -15,9 +18,11 @@ import * as firebase from 'firebase';
 })
 export class LoginPage {
   phoneNumber: any;
-
+  res:any;
+  otp:any;
+  id:any;
   public recaptca: firebase.auth.RecaptchaVerifier;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public data:DataProvider) {
   }
 
   ionViewDidLoad() {
@@ -31,38 +36,23 @@ export class LoginPage {
     const phoneNumberString = "+91" + phoneNumber;
     await firebase.auth().signInWithPhoneNumber(phoneNumberString, appVerifier)
       .then( confirmationResult => {
-        let prompt = this.alertCtrl.create({
-        title: 'Enter the Confirmation code',
-        inputs: [{ name: 'confirmationCode', placeholder: 'Confirmation Code' }],
-        buttons: [
-          { text: 'Cancel',
-            handler: data => { console.log('Cancel clicked'); }
-          },
-          { text: 'Send',
-            handler: data => {
-
-              confirmationResult.confirm(data.confirmationCode)
-              .then(function (result) {
-                console.log(result.user);
-                // ...
-              }).catch(function (error) {
-                // User couldn't sign in (bad verification code?)
-                // ...
-              });
-            }
-          }
-        ]
-      });
-      prompt.present();
-      // firebase.auth().signOut()
-      
-    })
+         this.res = confirmationResult;
+      })
     .catch(function (error) {
       console.error("SMS not sent", error);
     });
-    this.navCtrl.setRoot('');
-    let id = firebase.auth().currentUser;
-    firebase.database().ref(`user/${id}`)
+    // this.navCtrl.setRoot(MaterialPage);
+    // let id = firebase.auth().currentUser;
+    // firebase.database().ref(`user/${id}`)
+  }
+  in(){
+    var cred = firebase.auth.PhoneAuthProvider.credential(this.res.verificationId,this.otp);
+         firebase.auth().signInWithCredential(cred);
+         this.data.currUser = firebase.auth().currentUser.uid;
+         if( this.data.currUser !== null )
+         {
+           this.navCtrl.setRoot(MaterialPage);
+         }
   }
 
 }
