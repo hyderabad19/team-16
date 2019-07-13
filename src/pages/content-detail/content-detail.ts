@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import * as firebase from 'firebase';
 /**
  * Generated class for the ContentDetailPage page.
  *
@@ -21,11 +21,13 @@ export class ContentDetailPage {
   likesCount="0";
   comment_list=["First Comment","Second Comment","Third Comment"];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContentDetailPage');
   }
+
   commentPost(){
     console.log("here",this.show);
     if(this.show===false || this.show===undefined){
@@ -36,5 +38,5 @@ export class ContentDetailPage {
       this.show=false;
     }
   }
-
+  
 }
