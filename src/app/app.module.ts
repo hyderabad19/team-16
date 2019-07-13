@@ -7,6 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import * as firebase from 'firebase';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+
+import { SearchPage } from '../pages/search/search';
+
 import { ContentDetailPage } from '../pages/content-detail/content-detail';
 
 var firebaseConfig = {
@@ -25,9 +28,10 @@ firebase.initializeApp(firebaseConfig);
   declarations: [
     MyApp,
     HomePage,
+    SearchPage,
     ContentDetailPage,
     LoginPage
-  ],
+    ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp)
@@ -36,6 +40,7 @@ firebase.initializeApp(firebaseConfig);
   entryComponents: [
     MyApp,
     HomePage,
+    SearchPage,
     ContentDetailPage,
     LoginPage
   ],
