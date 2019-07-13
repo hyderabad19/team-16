@@ -8,6 +8,11 @@ import * as firebase from 'firebase';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { SearchPage } from '../pages/search/search';
+import { FeedBackPage } from '../pages/feed-back/feed-back';
+
+import { ContentDetailPage } from '../pages/content-detail/content-detail';
+
 var firebaseConfig = {
   apiKey: "AIzaSyD9lBFZ5g5V5q6ztEiOxLKXpADcKKXvbDg",
   authDomain: "learning-curve-18a65.firebaseapp.com",
@@ -22,9 +27,12 @@ firebase.initializeApp(firebaseConfig);
 
 @NgModule({
   declarations: [
-    MyApp,
+    MyApp,FeedBackPage,
+    HomePage,
+    SearchPage,
+    ContentDetailPage,
     LoginPage
-  ],
+    ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp)
@@ -32,6 +40,10 @@ firebase.initializeApp(firebaseConfig);
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    HomePage,
+    FeedBackPage,
+    SearchPage,
+    ContentDetailPage,
     LoginPage
   ],
   providers: [

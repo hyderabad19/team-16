@@ -1,0 +1,93 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            FEEDBACK FORM
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h1 style="text-align: center;">FEEDBACK FORM</h1>
+    <form ng-submit="onsubmit()">
+        <br><br><br><br>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style="text-align: left;">
+                Rate the content: &nbsp; &nbsp; &nbsp; &nbsp;
+                <input type="radio" name="rate"> 1 &nbsp;
+                <input type="radio" name="rate"> 2 &nbsp;
+                <input type="radio" name="rate"> 3 &nbsp;
+                <input type="radio" name="rate"> 4 &nbsp;
+                <input type="radio" name="rate"> 5 &nbsp;
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <br><br><br>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style="text-align: left;">
+                What aspects did you learn?
+                <br><br>
+                <input type="checkbox" name="learn"> General Knowledge<br>
+                <input type="checkbox" name="learn"> Technical content<br>
+                <input type="checkbox" name="learn"> Other
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <br><br><br>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style="text-align: left;">
+                What is the level of content?
+                <br><br>
+                <select>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style="text-align: left;">
+                Quality of the content?
+                <br><br>
+                <select>
+            <option value="Low">Low</option>
+           <option value="Medium">Medium</option>
+           <option value="High">High</option>
+        </select>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style="text-align: left;">
+                Is the content relavant to this topic?
+                <br><br>
+                <select>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style="text-align: left;">
+                In what way the content help you?
+                <br><br>
+                <textarea rows="5" cols="50">Give your feedback</textarea>
+            </div>
+            <div class="col"></div>
+        </div>
+    </form>
+</ion-content>
