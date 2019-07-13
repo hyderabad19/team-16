@@ -5,7 +5,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 // import { MaterialPage }
-import {SearchPage} from './../pages/search/search'
+import {SearchPage} from './../pages/search/search';
 
 
 @Component({
