@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import * as firebase from 'firebase';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import {UserPage} from '../pages/user/user';
 
 var firebaseConfig = {
   apiKey: "AIzaSyD9lBFZ5g5V5q6ztEiOxLKXpADcKKXvbDg",
@@ -22,7 +23,9 @@ firebase.initializeApp(firebaseConfig);
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    UserPage,
+    
   ],
   imports: [
     BrowserModule,
@@ -31,11 +34,14 @@ firebase.initializeApp(firebaseConfig);
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    UserPage,
+  
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
