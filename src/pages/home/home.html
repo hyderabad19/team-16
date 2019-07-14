@@ -6,20 +6,16 @@
 -->
 <ion-header>
     <ion-navbar>
-        <ion-title>homePage</ion-title>
+        <ion-title>Admin</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-    <ion-card>
-        <ion-row>
-            <ion-col align-self: center>
-                <p>Welcome to Learning Curve </p>
-            </ion-col>
-        </ion-row>
-        <div>
-            <ion-row><button ion-button>Login</button></ion-row>
-            <ion-row><button ion-button>SignUp</button></ion-row>
-        </div>
-    </ion-card>
+        <ion-item>
+                <ion-label stacked>E-mail</ion-label>
+                <ion-input type="email" [(ngModel)]="emails"></ion-input>
+                </ion-item>
+                <button ion-button id="sign-in-button" (click)="inAdmin()">
+                    Sign In as Admin
+                </button>
 </ion-content>

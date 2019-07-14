@@ -1,8 +1,10 @@
+import { HomePage } from './../home/home';
 import { DataProvider } from './../../providers/data/data';
 import { MaterialPage } from './../material/material';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import * as firebase from 'firebase';
+// import { MaterialPage }
 
 /**
  * Generated class for the LoginPage page.
@@ -49,10 +51,14 @@ export class LoginPage {
     var cred = firebase.auth.PhoneAuthProvider.credential(this.res.verificationId,this.otp);
          firebase.auth().signInWithCredential(cred);
          this.data.currUser = firebase.auth().currentUser.uid;
-         if( this.data.currUser !== null )
+         if( this.phoneNumber !== null )
          {
            this.navCtrl.setRoot(MaterialPage);
          }
+
+  }
+  inAdmin(){
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

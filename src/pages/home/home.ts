@@ -1,3 +1,4 @@
+import { MaterialPage } from './../material/material';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,12 +15,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
-
+  emails:string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
+  }
+  inAdmin(){
+    // if(this.emails.localeCompare('bolusanir@gmail.com'))
+    // {
+      console.log( 'Success' );
+      this.navCtrl.setRoot(MaterialPage);
+    // }
+    
   }
 
 }
