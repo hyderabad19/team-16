@@ -34,13 +34,13 @@ firebase.initializeApp(firebaseConfig);
 
 @NgModule({
   declarations: [
-<<<<<<< HEAD
+
     MyApp,
     HomePage,
     UserPage,
     
   ],
-=======
+
     MyApp,FeedBackPage,
     HomePage,
     SearchPage,
@@ -58,7 +58,7 @@ firebase.initializeApp(firebaseConfig);
   entryComponents: [
     MyApp,
     HomePage,
-<<<<<<< HEAD
+
     UserPage,
   
   ],
@@ -67,7 +67,6 @@ firebase.initializeApp(firebaseConfig);
     SplashScreen,
     push,
     
-=======
     FeedBackPage,
     SearchPage,
     ContentDetailPage,
@@ -78,7 +77,7 @@ firebase.initializeApp(firebaseConfig);
   providers: [
     StatusBar,
     SplashScreen,DataProvider,
->>>>>>> 89ebd424e69dbba62c938ed3f625bd1ea8da5c43
+
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -46,7 +46,7 @@ export class MyApp {
       },
       windows: {},
       browser: {
-          pushServiceURL: 'http://push.api.phonegap.com/v1/push';
+          pushServiceURL: 'http://push.api.phonegap.com/v1/push'
       }
    };
    
