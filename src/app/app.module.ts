@@ -30,7 +30,7 @@ firebase.initializeApp(firebaseConfig);
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp)
-  ],
+  ],   
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -41,6 +41,7 @@ firebase.initializeApp(firebaseConfig);
   providers: [
     StatusBar,
     SplashScreen,
+    push,
     
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

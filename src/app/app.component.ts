@@ -6,6 +6,7 @@ import {Push, PushObject, PushOptions } from '@ionic-native/push';
 
 
 import { HomePage } from '../pages/home/home';
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -33,7 +34,7 @@ export class MyApp {
       },
       windows: {},
       browser: {
-          pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+          pushServiceURL: 'http://push.api.phonegap.com/v1/push';
       }
    };
    
