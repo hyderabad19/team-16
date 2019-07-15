@@ -46,3 +46,4 @@ firebase.initializeApp(firebaseConfig);
   ]
 })
 export class AppModule {}
+
