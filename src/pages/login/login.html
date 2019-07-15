@@ -11,5 +11,26 @@
 </ion-header>
 
 <ion-content padding>
+<<<<<<< HEAD
+=======
+  <ion-item>
+    <ion-label stacked>Phone Number</ion-label>
+    <ion-input type="number" [(ngModel)]="phoneNumber"></ion-input>
+  </ion-item>
+  <button ion-button id="sign-in-button" (click)="signIn()">
+    Send OTP
+  </button>
+  <div id="recaptcha-container"></div>
+  <ion-item>
+      <ion-label stacked>OTP</ion-label>
+      <ion-input type="number" [(ngModel)]="otp"></ion-input>
+    </ion-item>
+    <button ion-button id="sign-in-button" (click)="in()">
+        Sign In
+      </button>
+      <button ion-button id="sign-in-button" (click)="inAdmin()">
+          Sign In as Admin
+        </button>
+>>>>>>> 89ebd424e69dbba62c938ed3f625bd1ea8da5c43
 
 </ion-content>
